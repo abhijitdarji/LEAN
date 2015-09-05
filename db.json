@@ -1,0 +1,57 @@
+{
+  "persons": [
+    {
+      "id": "3123ab99-0797-4851-8864-7692b3dc1e94",
+      "first_name": "Yoginder",
+      "last_name": "Rana",
+      "email": "Hamsini99@gmail.com"
+    },
+    {
+      "id": "8e81d415-8154-4502-afeb-99c7203f81fa",
+      "first_name": "Sarada",
+      "last_name": "Patil",
+      "email": "Chitramala10@gmail.com"
+    },
+    {
+      "id": "a734a615-a302-492b-8115-247504865169",
+      "first_name": "Keerti",
+      "last_name": "Bhattathiri",
+      "email": "Adripathi92@hotmail.com"
+    },
+    {
+      "id": "7a615669-3ede-40a2-a701-42fb8337e08c",
+      "first_name": "Bilva",
+      "last_name": "Tandon",
+      "email": "Bhima_Guha@gmail.com"
+    },
+    {
+      "id": "e04170cb-2ee6-4059-b68e-3b1378acc058",
+      "first_name": "Anshula",
+      "last_name": "Mishra",
+      "email": "Mangala41@gmail.com"
+    },
+    {
+      "id": "104fdfbd-7429-4b72-8157-2b76d151fa06",
+      "first_name": "Pushti",
+      "last_name": "Dubashi",
+      "email": "Yogesh_Tagore15@yahoo.co.in"
+    }
+  ],
+  "cities": [
+    {
+      "city_name": "Adiga side"
+    },
+    {
+      "city_name": "North Triloki ville"
+    },
+    {
+      "city_name": "West Gautama borough"
+    },
+    {
+      "city_name": "Mukhopadhyay furt"
+    },
+    {
+      "city_name": "Lake Balamani"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Person Manager</title>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="node_modules/faker/build/build/faker.min.js"></script>
+</head>
+
+<body>
+	<div ng-controller="myCtrl as vm">
+		<div>Person Manager</div>
+		<div>{{vm.msg}}</div>
+		<button ng-click="vm.newPerson()">New</button>
+		<table>
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Select</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="person in vm.persons">
+					<td>{{person.first_name}}</td>
+					<td>{{person.last_name}}</td>
+					<td>{{person.email}}</td>
+					<td>
+						<button ng-click="vm.selectPerson(person.id)">Select</button>
+					</td>
+					<td>
+						<button ng-click="vm.deletePerson(person.id)" ng-disabled="vm.showDtls && vm.selPerson != null && vm.selPerson.id == person.id">Delete</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<hr/> Details view: {{vm.dtlsMsg}}
+		<table ng-if="vm.showDtls">
+			<thead>
+				<tr>
+					<th>Details</th>
+					<th>Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ID</td>
+					<td>{{vm.selPerson.id}}</td>
+				</tr>
+				<tr>
+					<td>First Name</td>
+					<td>
+						<input type="text" ng-model="vm.selPerson.first_name">
+					</td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td>
+						<input type="text" ng-model="vm.selPerson.last_name">
+					</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>
+						<input type="text" ng-model="vm.selPerson.email">
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button ng-click="vm.updatePerson(vm.selPerson)">Save</button>
+						<button ng-click="vm.showDtls=false">Cancel</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
